@@ -1,0 +1,65 @@
+/* General card styling */
+.task-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: calc(33.333% - 20px); /* Increase card width by 10% */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for task header */
+  .task-card h3 {
+    margin: 0 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Additional content within card */
+  .task-card p {
+    margin: 10px 0;
+  }
+  
+  /* Align buttons at the bottom */
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+  }
+  
+  /* Button styles */
+  .btn {
+    background-color: steelblue;
+    color: white;
+    border: none;
+    padding: 6px 12px; /* Smaller padding for buttons */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px; /* Smaller font size */
+    text-align: center;
+    flex: 1;
+    margin: 0 5px; /* Margin between buttons */
+  }
+  
+  .btn.edit {
+    background-color: steelblue;
+  }
+  
+  .btn.delete {
+    background-color: red;
+  }
+  
+  .btn.reminder {
+    background-color: green;
+  }
+  
+  .btn.reminder.active {
+    background-color: darkgreen;
+  }
+  

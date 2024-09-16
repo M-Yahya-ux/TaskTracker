@@ -1,0 +1,303 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+/* Reset and global styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container for overall layout */
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    margin: 10px;
+  }
+}
+
+/* Header section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background: #28a745; /* Green background for primary buttons */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98); /* Slight scale effect on click */
+}
+
+.btn-danger {
+  background-color: #dc3545; /* Red for delete/cancel buttons */
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+/* Full-width button for block elements */
+.btn-block {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  padding: 12px 0;
+}
+
+.btn-block:hover {
+  opacity: 0.9;
+}
+
+/* Form styling */
+.add-form, .edit-form {
+  margin-bottom: 40px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+  font-weight: bold;
+}
+
+.form-control input, .form-control textarea, .form-control select {
+  width: 100%;
+  height: 40px;
+  margin: 5px 0;
+  padding: 10px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.form-control input:focus, .form-control textarea:focus, .form-control select:focus {
+  border-color: steelblue;
+  outline: none;
+}
+
+.form-control textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Checkbox styling */
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #777;
+  font-size: 0.9em;
+}
+
+/* Task card and reminder style */
+.tasks-section {
+  margin-bottom: 20px;
+}
+
+.task {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 5px solid steelblue;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task:hover {
+  background-color: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+}
+
+.task h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Card layout for tasks */
+.tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.task-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  width: calc(33.333% - 20px); /* Adjust for 3 cards per row */
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.task-card:hover {
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.task-card h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card p {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .task-card {
+    width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .task-card {
+    width: 100%; /* 1 card per row on small screens */
+  }
+}
+
+/* Controls and Search Bar */
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: steelblue;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: steelblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+  background-color: #333;
+}
+
+.search-bar button:active {
+  transform: scale(0.98);
+}
+
+.filter-section, .sort-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-section select, .sort-section select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  transition: border-color 0.3s ease;
+}
+
+.filter-section select:focus, .sort-section select:focus {
+  border-color: steelblue;
+  outline: none;
+}
+
+/* Total Tasks Display */
+.total-tasks {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}

@@ -1,0 +1,165 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+/* Apply box-sizing border-box and reset margin/padding for all elements */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set font family for the entire body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Container styling */
+.container {
+  max-width: 1200px; /* Wider container for larger screens */
+  margin: 30px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    margin: 15px;
+  }
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  background: steelblue;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Task card styling */
+.tasks-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Default card size */
+.task-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px; /* Increased padding for better spacing */
+  width: calc(33.333% - 20px); /* 3 cards per row on larger screens */
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.task-card:hover {
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.task-card h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-card p {
+  margin: 10px 0;
+}
+
+.task-card .reminder {
+  border-left: 5px solid green;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .task-card {
+    width: calc(50% - 20px); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .task-card {
+    width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .task-card {
+    width: 100%; /* 1 card per row on small screens */
+  }
+}
+
+/* Form styling */
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control input[type="text"],
+.form-control input[type="submit"],
+.form-control textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  color: #777;
+}

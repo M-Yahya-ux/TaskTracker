@@ -1,0 +1,134 @@
+.add-task-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.add-task-container h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2a9d8f;
+}
+
+.add-task-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-task-form label {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.add-task-form input,
+.add-task-form textarea,
+.add-task-form select {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.add-task-form input:focus,
+.add-task-form textarea:focus,
+.add-task-form select:focus {
+  border-color: #2a9d8f;
+  outline: none;
+}
+
+.add-task-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.add-task-form button {
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.add-task-form button:hover {
+  background-color: #21867a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .add-task-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-task-container {
+    width: 100%;
+  }
+}
+/* AddTask.css */
+.add-task-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.add-form input,
+.add-form select,
+.add-form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 100%;
+}
+
+.add-form button {
+  padding: 10px;
+  background-color: steelblue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-form button:hover {
+  background-color: #333;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .add-task-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-task-container {
+    padding: 10px;
+  }
+}
